@@ -1,1 +1,25 @@
-$text: rgba(0, 0, 0, 0.8);
+$main: #bb99b7;
+$accent1: #e48826;
+$accent2: #a0b3a8;
+$title: #29282d;
+$text: #8d8d8d;
+$bg: #f6f6f6;
+$border: #ececec;
+$btn-form: #334d44;
+
+%quicksand-400 {
+  font-family: "Quicksand-Regular", sans-serif;
+  font-weight: 400;
+}
+%quicksand-500 {
+  font-family: "Quicksand-Medium", sans-serif;
+  font-weight: 500;
+}
+%roboto-400 {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+}
+%roboto-700 {
+  font-family: "Roboto-Bolt", sans-serif;
+  font-weight: 700;
+}
