@@ -63,18 +63,183 @@
   }
 }
 
+.slider-top {
+  padding-top: 30px;
+  background-color: $bg;
+  background-image: url("../images/slider/slider-top_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  &__item {
+    position: relative;
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    &-title {
+      margin-bottom: 15px;
+      max-width: 600px;
+      @extend %roboto-700;
+      font-size: 58px;
+      line-height: 68px;
+      color: $title;
+      & span {
+        display: block;
+      }
+    }
+    &-text {
+      margin-bottom: 30px;
+      max-width: 470px;
+    }
+    &-btn {
+      @extend %btn;
+    }
+    &-img {
+      width: 320px;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    button {
+      position: relative;
+      padding: 0;
+      font-size: 0;
+      background: transparent;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      cursor: pointer;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $text;
+      }
+    }
+    li.slick-active {
+      button {
+        border: 2px solid $main;
+      }
+    }
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.footer {
+  padding: 70px 0 30px 0;
+  background: $bg;
+  color: $text;
+  &-top {
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $border;
+    &__item-contacts {
+      width: 240px;
+    }
+    &__item-nav {
+      width: 150px;
+    }
+    &__item-form {
+      width: 470px;
+    }
+    &__logo {
+      width: 160px;
+      margin-bottom: 15px;
+    }
+    &__adress {
+      line-height: 35px;
+    }
+    &__adress,
+    &__email,
+    &__phone {
+      margin-bottom: 10px;
+    }
+    &__social {
+      margin-top: 20px;
+      padding-right: 70px;
+      display: flex;
+      justify-content: space-between;
+      &-link {
+        display: flex;
+        fill: $text;
+        transition: all 0.5s;
+        &:hover {
+          fill: $main;
+        }
+      }
+    }
+    .footer-top__social-link--active {
+      fill: $main;
+    }
+    &__title {
+      margin-bottom: 13px;
+      @extend %roboto-700;
+      font-size: 22px;
+      line-height: 36px;
+      color: $title;
+    }
+    &__item {
+      margin-bottom: 10px;
+    }
+    &__text {
+      margin-bottom: 30px;
+    }
+    &__form-input {
+      width: 290px;
+      padding: 15px 10px;
+      margin-right: 5px;
+      background: #fff;
+      color: $text;
+      border: none;
+      outline: none;
+      box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+      &::placeholder {
+        color: $text;
+      }
+    }
+    &__form-btn {
+      @extend %btn;
+      padding: 14px 25px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  &-bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    &__accept {
+      display: flex;
+      &-mastercard {
+        fill: $accent1;
+      }
+      &-visa {
+        fill: $accent2;
+      }
+      &-paypal {
+        fill: $main;
+      }
+      &-mastercard,
+      &-visa,
+      &-paypal {
+        margin-left: 20px;
+        display: flex;
+      }
+    }
+  }
+}
 
 @import "media";
