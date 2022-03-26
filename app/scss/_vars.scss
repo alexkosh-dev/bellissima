@@ -31,3 +31,47 @@ $btn-form: #334d44;
   color: #fff;
   box-shadow: 0px 7px 20px 0px $main;
 }
+
+%btn2 {
+  padding: 10px 30px;
+  background: transparent;
+  text-transform: uppercase;
+  color: $title;
+  border: 1px solid $main;
+  @extend %roboto-400;
+  letter-spacing: 2px;
+}
+
+%btn-form {
+  @extend %roboto-400;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  background: $btn-form;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+%title1 {
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 26px;
+  color: $title;
+  text-transform: uppercase;
+}
+
+%title2 {
+  @extend %roboto-400;
+  font-size: 22px;
+  line-height: 26px;
+  color: $title;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
