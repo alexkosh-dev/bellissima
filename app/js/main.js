@@ -45,6 +45,8 @@ $(function () {
     $(this).toggleClass('products-item__info-btn--add');
   });
 
+  $(".blog-left__slider").slick({});
+
   function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
@@ -85,4 +87,7 @@ $(function () {
 
   var deadline = $(".promo-timer__inner").attr("data-time");
   initializeClock("promo-timer__inner", deadline);
+
+
+  
 });
