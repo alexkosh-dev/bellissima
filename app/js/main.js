@@ -14,6 +14,37 @@ $(function () {
     readOnly: true,
   });
 
+  $(".filter-price__input").ionRangeSlider({
+    type: "double",
+    onStart: function (data) {
+      $(".filter-price__from").text(data.from);
+      $(".filter-price__to").text(data.to);
+    },
+    onChange: function (data) {
+      $(".filter-price__from").text(data.from);
+      $(".filter-price__to").text(data.to);
+    },
+  });
+
+  // click active filter btns
+  $(".shop-content__filters-btn").on("click", function () {
+    $(".shop-content__filters-btn").removeClass(
+      "shop-content__filters-btn--active"
+    );
+    $(this).addClass("shop-content__filters-btn--active");
+  });
+
+  $(".btn-list").on("click", function () {
+    $(".shop-content__products").addClass("shop-content__products--list");
+  });
+  $(".btn-grid").on("click", function () {
+    $(".shop-content__products").removeClass("shop-content__products--list");
+  });
+
+  $('.products-item__info-btn').on('click', function(){
+    $(this).toggleClass('products-item__info-btn--add');
+  });
+
   function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
